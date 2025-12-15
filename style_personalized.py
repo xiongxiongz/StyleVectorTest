@@ -20,7 +20,7 @@ test_data = test_data_n.select(range(10))  # 选择前 10 条
 
 # Model
 device = torch.device("cuda:7")
-model_address = "/NAS/HuggingFaceModels/Llama-2-7b-chat-hf"
+model_address = "/data/Datasets/Llama-2-7b-chat-hf"
 quantization_config = BitsAndBytesConfig(load_in_8bit=True)
 tokenizer = AutoTokenizer.from_pretrained(model_address)
 model = AutoModelForCausalLM.from_pretrained(
